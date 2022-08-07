@@ -4,7 +4,7 @@
     --color-dark: #525252;
     --color-black: #141415;
     --color-primary: #f28482;
-    --color-primary-light: hsla(0, 88%, 66%, 0.219);
+    --color-primary-light: hsla(0, 25%, 62%, 0.219);
     --color-success: #69b3a0;
     --color-warning: #f6bd60;
     --transition: all 300ms ease;
@@ -106,12 +106,12 @@ nav .container{
     align-items: center;
     height: 100%;
 }
- nav button{
+nav button{
     display: none;
- }
- nav h3{
+}
+nav h3{
     color: var(--color-primary);
- }
+}
 nav .container ul{
     display: flex;
     height: 100%;
@@ -172,11 +172,9 @@ section.landing .socials a:hover{
 section.landing .info h1{
     text-align: left;
     margin: 0%;
-   
 }
 section.landing .info h3{
     margin: 2.4rem 0 1rem;
-  
 }
 section.landing .info p{
     width: 35rem;
@@ -443,6 +441,7 @@ section.testimonials .testimonial{
     gap: 1rem;
     font-size: 0.9rem;
     margin-bottom: 2rem;
+    cursor: grab;
 }
 section.testimonials .testimonial .head{
     display: flex;
@@ -465,7 +464,7 @@ section.testimonials .testimonial .head .stars{
 section.testimonials .testimonial .head .stars span{
     font-size: 1.2rem;
 }
-/* =======================end of testimonial section===============*/
+/* =======================end of testimonial part===============*/
 
 
 section.contact{
@@ -571,3 +570,181 @@ footer .copyright{
     font-size: 0.8rem;
 }
 /*================end of footer =====================*/
+@media screen and (max-width: 600px){
+    /*============headings======*/
+    h1{
+        font-size: 2.2rem;
+    }
+    h2{
+        font-size: 1.6rem;
+    }
+    h3{
+        font-size: 1.2rem;
+    }
+    h4{
+        font-size: 1rem;
+    }
+    h5{
+        font-size: 0.68rem;
+    }
+    .container{
+        width: 90%;
+    }
+    /*===========nav bar================*/
+    nav {
+        box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+    }
+    nav h3{
+        margin-left: 1rem;
+    }
+    nav .container{
+        width: 100%;
+    }
+    nav .container ul{
+        position: fixed;
+        top: 0;
+        flex-direction: column;
+        z-index: 3;
+        width: 16rem;
+        height: 100vw;
+        background: var(--color-white);
+        box-shadow: 1rem 0 2rem var(--color-primary-light);
+        display: none;
+    }
+    nav ul li{
+        height: 4.6rem;
+    }
+    nav .container ul li a{
+        width: 100%;
+        justify-content: start;
+        padding-left: 2rem;
+    }
+    nav .container ul li a:hover{
+        padding-left: 3rem;
+    }
+    nav button {
+        display: inline-block;
+        cursor: pointer;
+        background: transparent;
+        color: var(--color-black);
+        margin-right: 1rem;
+    }
+    nav button#close-btn{
+        display: none;
+    }
+    /*================and of navbar=============*/
+    section.landing{
+        margin-top: -4rem;
+        padding-bottom: 7rem;
+        max-width: 100vw;
+        overflow-x: hidden ;
+    }
+    section.landing .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 20% 50%;
+        text-align: center;
+        row-gap: 6rem;
+    }
+    section.landing .container .socials{
+        display: none ;
+    }
+    section.landing .container .info{
+        width: 90%;
+        margin: 0 auto;
+    }
+    section.landing .container .info h1{
+        text-align: center;
+    }
+    section.landing .container .info p{
+        margin: 0 auto;
+        width: 92%;
+    }
+    section.landing .container .profile-area{
+        grid-row: 1;
+        width: 90%;
+        margin: 0 auto;
+    }
+    section.landing .container .outer-circle{
+        width: 16rem;
+        height: 16rem;
+    }
+    section.landing .container .inner-circle{
+        width: 10rem;
+        height: 10rem;
+    }
+    section.landing .container .outer-circle span{
+        width: 3rem;
+        height: 3rem;
+    }
+    section.landing .profile-area .outer-circle span:nth-child(1){
+        left: calc(50% - 1.5rem);
+        top: -1.5rem;
+    }
+    section.landing .profile-area .outer-circle span:nth-child(2){
+        right: -1.5rem;
+        top: calc(50% - 1.5rem);
+    }
+    section.landing .profile-area .outer-circle span:nth-child(3){
+        left: -1.5rem;
+        top: calc(50% - 1.5rem);
+    }
+    section.landing .profile-area .outer-circle span:nth-child(4){
+        bottom: -1.5rem;
+        left: calc(50% - 1.5rem);
+    }
+    /*======== end of landing section================*/
+    section.about .container{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        text-align: center;
+    }
+    /*=================== end of about section=============*/
+    section.skills .container{
+        width: 94%;
+    }
+    /*================end of skills section==============*/
+    section.services .container{
+        grid-template-columns: 1fr;
+    }
+        /*================end of services section==============*/
+    section.recent-work .projects{
+        grid-template-columns: 1fr;
+    }
+    section.recent-work h1{
+        width: 94vw;
+        margin: 1.4rem 0 1rem;
+        padding: 0;
+    }
+    section.recent-work h2{
+        width: 94vw;
+        margin: 1rem 0 1rem;
+        padding: 0;
+        }
+        /*-================ end of portfolio section =============-*/
+        section.testimonials .container{
+            grid-template-columns: 1fr;
+            width: 94vw;
+        }
+        section.testimonials .container .testimonial .head .stars span {
+            font-size: 0.8rem;
+        }
+                /*-================ end of testimonials part =============-*/
+        section.contact .container{
+            width: 90vw;
+        }
+        section.contact .container p{
+            width: 80vw;
+            margin: 0.5rem auto 0;
+        }
+        /*================= end of contact section =================*/
+        footer .container{
+            flex-direction: column;
+            gap: 3rem;
+        }
+        footer .container ul{
+            flex-direction: column;
+            text-align: center;
+            gap: 1.4rem;
+        }
+}
+/*-================ end of media quries =============-*/
