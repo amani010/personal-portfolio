@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <!---stylesheet-->
     <link rel="stylesheet" href="./style.css">
-    <!--<a href="https://iconscout.com/illustrations/contact-us" target="_blank">Contact us Illustration</a> on <a href="https://iconscout.com">IconScout</a>-->
     <!--montsrrat-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,26 +18,32 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 </head>
 <body> 
-    <nav>
+    <div class="navlinks"> 
+    <nav> 
         <div class="container">
-            <a href="#"> <h3> AMANI DEV </h3> </a>
+            <a href="#landing"> <h3> AMANI DEV </h3> </a>
             <ul>
-                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#landing" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#services">Services</a> </li>
                 <li><a href="#portfolio">Portfolio</a> </li>
                 <li><a href="#contact">Contact Me</a> </li>
             </ul>
+            <div id="toggle">
+                <i class="indicator" ></i>
+            </div>
             <button id="menu-btn"><span class="material-icons-sharp">menu</span></button>
             <button id="close-btn"><span class="material-icons-sharp">close</span></button>
         </div>
+    </div>
     </nav>
     <!------------------------end of navbar------------------>
-    <section class="landing">
+
+    <section class="landing" id="landing">
         <div class="container">
             <div class="socials">
-                <!--<a href="https://www.instagram.com/code_amani" target="_blank"><i class="uil uil-instagram"></i></a> -->
+                <a href="https://www.instagram.com/code_amani" target="_blank"><i class="uil uil-instagram"></i></a> 
                 <a href="https://twitter.com/code_amani" target="_blank"><i class="uil uil-twitter"></i></a>
                 <!-- <a href="https://www.facebook.com/code.amani/" target="_blank"><i class="uil uil-facebook-f"></i></a> -->
                 <a href="https://dribbble.com/code_amani" target="_blank"><i class="uil uil-dribbble"></i></a>
@@ -77,12 +82,12 @@
                     <h4>Front-end Developer</h4> <br>
                     <p> I mainly  use HTML, CSS, and JavaScript to produce responsive websites and web apps that provide users the best and most appropriate experience suited to their device and browser.</p>
                     <p> I write standards based code that is semantic, accessible, search-engine friendly, easy to maintain, cross browser compatible, and performant.</p>
-                   <p>I can quickly and efficiently join your team using continuous-integration methods and tools such as Git and Agile.</p>
+                    <p>I can quickly and efficiently join your team using continuous-integration methods and tools such as Git and Agile.</p>
                     <p> After understanding your requirements, I can use my years of experience to determine the right tools and development methods for you. Often the simplest approach is the most successful.</p>
-                    <p> <h4> Philosophy </h4> <br>
-                        Web technology is controlling the future<br>if you get along with it, and understanding it & learn how to use it<br> you can control the future as well.</p>
-                    <p> <h4>  Get Started! </h4> <br>
-                        If you’d like to find out more about how I work and my process of working with clients, please <a href="#contact"> get in touch </a> and give a little information about the project you have in mind.I'll respond to you as soon as possible.<br> We can then set up a call to discuss how I can value to your project.</p>
+                    <h4> Philosophy </h4>
+                    <p>Web technology is controlling the future<br>if you get along with it, and understanding it & learn how to use it<br> you can control the future as well.</p>
+                    <h4>  Get Started! </h4> 
+                    <p> If you’d like to find out more about how I work and my process of working with clients, please <a href="#contact"> <strong>get in touch </strong></a> and give a little information about the project you have in mind.I'll respond to you as soon as possible.<br> We can then set up a call to discuss how I can value to your project.</p>
                         <p>I endeavour to respond to all inquiries within 1 working day. I look forward to learning about your project.</p>
                 </div>
                 <a class="raed-more">Show More</a>
@@ -517,12 +522,11 @@
         </div>
     </section>
 <!--===========================end of contact section==========================-->
-
     <footer>
         <div class="container">
-            <a href="#">AMANI DEV</a>
+            <a href="#landing">AMANI DEV</a>
             <ul>
-                <li><a href="#home">Home</a></li>
+                <li><a href="#landing">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#services">Services</a></li>
@@ -546,7 +550,18 @@
 
 
     <!--===================swiper.js==================-->
+    <script>
+        const body = document.querySelector('body');
+        const toggle = document.getElementById('toggle');
+            toggle.onclick = function(){
+            toggle.classList.toggle('active');
+            body.classList.toggle('active');
+}
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!---------------------------DARK MODE ---------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
     <script src="/main.js"> </script>
 
 </body>
