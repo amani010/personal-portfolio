@@ -28,11 +28,34 @@ const changeActiveItem = () => {
         const link = item.querySelector('a');
         link.classList.remove("active");
     });
-};
+}
     navItems.forEach(item => {
     const link = item.querySelector('a');
     link.addEventListener('click',() => {
         changeActiveItem ();
         link.classList.add("active");
-    });
-});
+    })
+})
+ // read more about
+const readMoreBtn = document.querySelector(".raed-more");
+const readMoreContent = document.querySelector(".read-more-content");
+
+readMoreBtn.addEventListener('click', () => {
+    readMoreContent.classList.toggle("show-content");
+    if(readMoreContent.classList.contains("show-content")){
+        readMoreBtn.textContent = "show less";
+    } else {
+        readMoreBtn.textContent = "show more";
+    }
+})
+//show/hide skills items
+const skillItems = document.querySelectorAll('section.skills .skill');
+skillItems.forEach(skill => {
+    skill.querySelector('.head').addEventListener('click', () => {
+        skill.querySelector('.items').classList.toggle('show-items');
+    })
+})
+// add a shadow on scroll
+window.addEventListener('scroll', () => {
+    document.querySelector('nav').classList.toggle('show-box-shadow',window.scrollY > 0)
+})
